@@ -4,6 +4,8 @@
 
 <p align="center">
   <a href="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://skills.sh/PyModel/vue3-best-practices"><img alt="skills.sh" src="https://skills.sh/b/PyModel/vue3-best-practices"></a>
+  <a href="https://www.npmjs.com/package/@pymodel/vue-skills-mcp"><img alt="npm" src="https://img.shields.io/npm/v/@pymodel/vue-skills-mcp?logo=npm&color=42b883"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-42b883.svg"></a>
   <img alt="Vue 3.5+" src="https://img.shields.io/badge/Vue-3.5%2B-42b883?logo=vuedotjs&logoColor=white">
   <img alt="Skills: 8" src="https://img.shields.io/badge/skills-8-35495e">
@@ -62,6 +64,14 @@ Without the prefix, triggering depends on how closely the prompt matches a skill
 ## MCP server
 
 For agents that consume MCP instead of the skills registry, [`mcp/`](mcp/) exposes every skill as MCP tools. The agent calls `vue_best_practices` when it detects Vue work, then pulls individual reference files on demand.
+
+The server is published as [`@pymodel/vue-skills-mcp`](https://www.npmjs.com/package/@pymodel/vue-skills-mcp) with the skills bundled, so no clone is needed:
+
+```bash
+claude mcp add vue-skills -- npx -y @pymodel/vue-skills-mcp
+```
+
+To run it from a local clone instead:
 
 ```bash
 cd mcp && npm install
