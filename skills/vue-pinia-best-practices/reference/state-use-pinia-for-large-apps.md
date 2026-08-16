@@ -243,6 +243,8 @@ export const useCounterStore = defineStore('counter', () => {
 
 ```bash
 npm install pinia
+# Pinia 4 note: ESM-only distribution, and @vue/devtools-api is a peer dependency
+# (install it alongside pinia if not already present)
 ```
 
 ```javascript

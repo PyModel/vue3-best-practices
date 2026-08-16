@@ -10,7 +10,7 @@
 
 | Branch | Purpose | Direct commits |
 |--------|---------|----------------|
-| `main` | Publishing (`npx skills add Pythoughts-labs/vue3-best-practices`) | Forbidden |
+| `main` | Publishing (`npx skills add PyModel/vue3-best-practices`) | Forbidden |
 | `dev` | Development, tests, experiments | Via PR only |
 
 ## Development Workflow
@@ -31,7 +31,7 @@ This ensures TypeScript types are correct before committing.
 | **vue-options-api-best-practices** | Vue 3 Options API style (`data()`, `methods`, `this` context). Each rule shows Options API solution only. |
 | **vue-jsx-best-practices** | JSX syntax in Vue (e.g., `class` vs `className`, JSX plugin config). |
 | **vue-testing-best-practices** | Testing with Vitest, Vue Test Utils, and Playwright for E2E. |
-| **vue-router-best-practices** | Vue Router 4 patterns, navigation guards, route params, and route-component lifecycle interactions. |
+| **vue-router-best-practices** | Vue Router 4/5 patterns, navigation guards, route params, file-based routing, and route-component lifecycle interactions. |
 | **vue-pinia-best-practices** | Pinia stores, state management patterns, store setup, and reactivity with stores. |
 | **vue-debug-guides** | Debugging and troubleshooting Vue 3: runtime errors, warnings, async error handling, SSR hydration issues. |
 
@@ -273,16 +273,12 @@ pnpm --filter @vue-skills/evals typecheck
 
 | Eval | Skill | Tests |
 |------|-------|-------|
-| `computed-vs-methods` | vue-best-practices | Uses computed() for derived data |
-| `no-v-if-with-v-for` | vue-best-practices | Separates v-if and v-for |
-| `v-for-key-attribute` | vue-best-practices | Uses :key with unique id |
-| `testing-vitest` | vue-testing-best-practices | Uses Vitest + Vue Test Utils |
-| `testing-async-flushpromises` | vue-testing-best-practices | Uses flushPromises for async |
-| `router-param-change` | vue-router-best-practices | Watches route params |
-| `pinia-store-destructuring` | vue-pinia-best-practices | Uses storeToRefs |
-| `no-arrow-functions-methods` | vue-options-api-best-practices | Regular function syntax |
-| `jsx-vue-vs-react` | vue-jsx-best-practices | Uses class not className |
-| `create-composable` | vue-best-practices | Creates reusable composable |
+| `reactive-props-destructure` | vue-best-practices | Reactive props destructure with defaults |
+| `vue-3-5-helpers` | vue-best-practices | Vue 3.5 helpers (useTemplateRef, useId, onWatcherCleanup) |
+| `streaming-chat-ui` | vue-ai-apps | Streaming chat with Vercel AI SDK useChat |
+| `tool-calling` | vue-ai-apps | Tool calling with useChat |
+| `structured-output` | vue-ai-apps | Structured output generation |
+| `error-handling-and-abort` | vue-ai-apps | Abort handling and error states in chat UI |
 
 ### Full Eval Matrix
 
