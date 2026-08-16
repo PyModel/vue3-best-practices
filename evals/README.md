@@ -29,10 +29,12 @@ Each scenario is a self-contained Vue + Vite + Vitest project:
 ### Verified vs. requires budget
 
 - **Verified:** `--dry` (install + build) passes on all scenarios; arg validation; results.json I/O.
+  CI runs `pnpm eval --all --dry` (no LLM, no cost) on any PR touching `evals/**`, so stub/boilerplate
+  rot fails the PR instead of a paid eval run — see `.github/workflows/eval-smoke.yml`.
 - **Requires API budget + `claude` CLI:** the four LLM tiers (`baseline`, `with-skill`,
   `with-skill-prompt`, `with-agents-md`). These are billed and user-triggered — not run in CI.
 - Skill install for the `with-skill*` tiers uses `npx skills add` against
-  `$VUE_SKILLS_SOURCE` (default `Pythoughts-labs/vue3-best-practices`); override for local setups.
+  `$VUE_SKILLS_SOURCE` (default `PyModel/vue3-best-practices`); override for local setups.
 
 ## Covered references
 
