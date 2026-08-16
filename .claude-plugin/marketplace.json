@@ -2,8 +2,8 @@
   "name": "vue3-best-practices",
   "description": "A collection of skills for Vue.js development.",
   "owner": {
-    "name": "Pythoughts-labs",
-    "url": "https://github.com/Pythoughts-labs/vue3-best-practices"
+    "name": "PyModel",
+    "url": "https://github.com/PyModel/vue3-best-practices"
   },
   "plugins": [
     {

@@ -1,9 +1,9 @@
 ---
 name: vue-pinia-best-practices
-description: "Pinia stores, state management patterns, store setup, and reactivity with stores."
-version: 1.0.0
+description: "Pinia stores, state management patterns, store setup, and reactivity with stores (Pinia 2-4: store API unchanged; v4 is ESM-only and requires @vue/devtools-api as a peer dependency)."
+version: 1.1.0
 license: MIT
-author: github.com/Pythoughts-labs
+author: github.com/PyModel
 ---
 
 Pinia best practices, common gotchas, and state management patterns.

@@ -3,7 +3,7 @@ name: vue-options-api-best-practices
 description: "Vue 3 Options API style (data(), methods, this context). Each reference shows Options API solution only."
 version: 2.0.0
 license: MIT
-author: github.com/Pythoughts-labs
+author: github.com/PyModel
 ---
 
 Vue.js Options API best practices, TypeScript integration, and common gotchas.

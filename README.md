@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Pythoughts-labs/vue3-best-practices/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Pythoughts-labs/vue3-best-practices/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml/badge.svg"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-42b883.svg"></a>
   <img alt="Vue 3.5+" src="https://img.shields.io/badge/Vue-3.5%2B-42b883?logo=vuedotjs&logoColor=white">
   <img alt="Skills: 8" src="https://img.shields.io/badge/skills-8-35495e">
@@ -14,7 +14,7 @@
 
 <p align="center">
   Agent skills that teach AI coding agents current Vue 3 patterns, validated with automated evals.<br>
-  Maintained by <a href="https://github.com/Pythoughts-labs">Pythoughts-labs</a>.
+  Maintained by <a href="https://github.com/PyModel">PyModel</a>.
 </p>
 
 <p align="center">
@@ -32,14 +32,14 @@
 Add the skills to any agent that supports the `skills` registry:
 
 ```bash
-npx skills add Pythoughts-labs/vue3-best-practices
+npx skills add PyModel/vue3-best-practices
 ```
 
 ### Claude Code marketplace
 
 ```bash
 # Add the marketplace
-/plugin marketplace add Pythoughts-labs/vue3-best-practices
+/plugin marketplace add PyModel/vue3-best-practices
 
 # Install everything at once
 /plugin install vue-skills-bundle@vue3-best-practices
@@ -129,7 +129,7 @@ claude mcp add vue-skills -- node <REPO>/mcp/index.mjs
 |-------|-------------|--------|
 | **vue-best-practices** | Vue 3 + Composition API + TypeScript | Reactivity, SFC structure, data flow, composables, SSR, performance |
 | **vue-options-api-best-practices** | Options API (`data()`, `methods`) | `this` context, lifecycle, TypeScript with Options API |
-| **vue-router-best-practices** | Vue Router 4 | Navigation guards, route params, route-component lifecycle |
+| **vue-router-best-practices** | Vue Router 4/5 | Navigation guards, route params, file-based routing, route-component lifecycle |
 | **vue-pinia-best-practices** | Pinia state management | Store setup, reactivity, `storeToRefs`, state patterns |
 | **vue-testing-best-practices** | Component or E2E tests | Vitest, Vue Test Utils, Playwright |
 | **vue-jsx-best-practices** | JSX in Vue | Syntax differences from React JSX, plugin config |
