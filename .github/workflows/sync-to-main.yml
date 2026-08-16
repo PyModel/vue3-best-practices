@@ -51,8 +51,11 @@ jobs:
           git restore --source=ORIG_HEAD --staged --worktree -- .
 
           # ...then re-apply only whitelisted paths from dev
+          # mcp/ must stay in this list: .github/ is synced, so main runs the
+          # MCP server job, and without mcp/ that job tests a stale tree (old
+          # package name, old version, unpatched lockfile) and always fails.
           git restore --source=origin/dev --staged --worktree -- \
-            skills/ evals/ package.json .github/ .claude-plugin/ README.md AGENTS.md CLAUDE.md LICENSE
+            skills/ evals/ mcp/ package.json .github/ .claude-plugin/ README.md AGENTS.md CLAUDE.md LICENSE
 
           git add -A
           if git diff --staged --quiet; then
