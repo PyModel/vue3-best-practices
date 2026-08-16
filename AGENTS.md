@@ -15,13 +15,16 @@
 
 ## Development Workflow
 
-After completing any task, run:
+After completing any task, run the repo's structure and server checks:
 
 ```bash
-pnpm typecheck
+node --test scripts/validate-skills.test.mjs   # skill front matter, references, marketplace
+npm --prefix mcp test                          # MCP server smoke test
 ```
 
-This ensures TypeScript types are correct before committing.
+There is no root TypeScript project, so there is no root `typecheck` script.
+Eval scenarios carry their own `vue-tsc` setup and are type-checked by their own
+`pnpm run build` inside the eval run.
 
 ## Skill Scopes
 
@@ -250,8 +253,8 @@ pnpm eval computed-vs-methods --dry
 # Verbose output (keep temp dir, show details)
 pnpm eval computed-vs-methods --verbose
 
-# Type check evals library
-pnpm --filter @vue-skills/evals typecheck
+# Validate skill structure (front matter, references, marketplace registration)
+node --test scripts/validate-skills.test.mjs
 ```
 
 **Skip logic:**

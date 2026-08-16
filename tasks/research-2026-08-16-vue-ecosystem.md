@@ -8,7 +8,7 @@ numbers were read directly from the npm registry / unpkg on 2026-08-16.
 
 | Package | Latest | Source |
 |---|---|---|
-| vue | 3.5.41 (stable) / 3.6.0-beta.17 (beta) | [registry](https://registry.npmjs.org/vue/latest), [unpkg beta](https://unpkg.com/vue@beta/package.json) |
+| vue | 3.5.41 (stable) / 3.6.0-rc.4 (prerelease) | [registry](https://registry.npmjs.org/vue/latest), [dist-tags](https://registry.npmjs.org/vue) |
 | pinia | 4.0.3 | [registry](https://registry.npmjs.org/pinia/latest) |
 | vue-router | 5.2.0 | [registry](https://registry.npmjs.org/vue-router/latest) |
 | vitest | 4.1.10 | [registry](https://registry.npmjs.org/vitest/latest) |
@@ -29,16 +29,21 @@ guide is now also served as Markdown for LLMs at `/style-guide.md`.
 
 **Vue 3.6 / Vapor Mode status:** stable is still 3.5.x; the newest release post
 on the official blog remains [Vue 3.5 (Sept 2024)](https://blog.vuejs.org/).
-3.6 is at [v3.6.0-beta.17](https://github.com/vuejs/core/releases/tag/v3.6.0-beta.17)
-([changelog](https://github.com/vuejs/core/blob/minor/CHANGELOG.md)); Vapor is
-opt-in and "feature-complete but still unstable" per those beta changelogs, and
+3.6 is at [v3.6.0-rc.4](https://github.com/vuejs/core/releases/tag/v3.6.0-rc.4)
+on the `rc` dist-tag ([changelog](https://github.com/vuejs/core/blob/minor/CHANGELOG.md));
+Vapor is opt-in and "feature-complete but still unstable" per those changelogs, and
 [vuejs.org/about/releases](https://vuejs.org/about/releases) states that
 prerelease APIs may change before stabilising. So 3.6/Vapor is not yet stable
 guidance — corroborated by Context7's `/vuejs/docs` index, which still describes
 Vapor as an exploratory strategy.
 
-**Vue Router 5** — released Jan 2026, now at 5.2.0. A "transition release":
-[upgrading from v4 requires no code changes](https://router.vuejs.org/guide/migration/v4-to-v5).
+**Vue Router 5** — released Jan 2026, now at 5.2.0. A "transition release": for
+Vue Router 4 users *without* file-based routing,
+[upgrading requires no code changes](https://router.vuejs.org/guide/migration/v4-to-v5).
+Projects on `unplugin-vue-router` must remove that dependency, repoint its
+imports at the core package (`vue-router/vite`, `vue-router/experimental`,
+`vue-router/unplugin`, `vue-router/volar/*`), and drop
+`unplugin-vue-router/client` from `tsconfig.json`.
 Key deltas ([releases](https://github.com/vuejs/router/releases)):
 - unplugin-vue-router (file-based routing) merged into the core package
 - `next()` callback in navigation guards now emits a deprecation warning
