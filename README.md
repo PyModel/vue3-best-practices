@@ -6,9 +6,9 @@
   <a href="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml/badge.svg"></a>
   <a href="https://skills.sh/PyModel/vue3-best-practices"><img alt="skills.sh" src="https://skills.sh/b/PyModel/vue3-best-practices"></a>
   <a href="https://www.npmjs.com/package/@pymodel/vue-skills-mcp"><img alt="npm" src="https://img.shields.io/npm/v/@pymodel/vue-skills-mcp?logo=npm&color=42b883"></a>
+  <a href="https://www.npmjs.com/package/@pymodel/vue-skills-mcp"><img alt="npm downloads" src="https://img.shields.io/npm/dm/@pymodel/vue-skills-mcp?logo=npm&color=35495e&label=downloads"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-42b883.svg"></a>
   <img alt="Vue 3.5+" src="https://img.shields.io/badge/Vue-3.5%2B-42b883?logo=vuedotjs&logoColor=white">
-  <img alt="Skills: 8" src="https://img.shields.io/badge/skills-8-35495e">
   <img alt="MCP server" src="https://img.shields.io/badge/MCP-server-35495e">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white">
   <a href="#contributing"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-42b883"></a>
