@@ -3,10 +3,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Pythoughts-labs/vue3-best-practices/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/Pythoughts-labs/vue3-best-practices/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/PyModel/vue3-best-practices/actions/workflows/ci.yml/badge.svg"></a>
+  <a href="https://skills.sh/PyModel/vue3-best-practices"><img alt="skills.sh" src="https://skills.sh/b/PyModel/vue3-best-practices"></a>
+  <a href="https://www.npmjs.com/package/@pymodel/vue-skills-mcp"><img alt="npm" src="https://img.shields.io/npm/v/@pymodel/vue-skills-mcp?logo=npm&color=42b883"></a>
+  <a href="https://www.npmjs.com/package/@pymodel/vue-skills-mcp"><img alt="npm downloads" src="https://img.shields.io/npm/dm/@pymodel/vue-skills-mcp?logo=npm&color=35495e&label=downloads"></a>
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-42b883.svg"></a>
   <img alt="Vue 3.5+" src="https://img.shields.io/badge/Vue-3.5%2B-42b883?logo=vuedotjs&logoColor=white">
-  <img alt="Skills: 8" src="https://img.shields.io/badge/skills-8-35495e">
   <img alt="MCP server" src="https://img.shields.io/badge/MCP-server-35495e">
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-strict-3178c6?logo=typescript&logoColor=white">
   <a href="#contributing"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-42b883"></a>
@@ -14,7 +16,7 @@
 
 <p align="center">
   Agent skills that teach AI coding agents current Vue 3 patterns, validated with automated evals.<br>
-  Maintained by <a href="https://github.com/Pythoughts-labs">Pythoughts-labs</a>.
+  Maintained by <a href="https://github.com/PyModel">PyModel</a>.
 </p>
 
 <p align="center">
@@ -32,14 +34,14 @@
 Add the skills to any agent that supports the `skills` registry:
 
 ```bash
-npx skills add Pythoughts-labs/vue3-best-practices
+npx skills add PyModel/vue3-best-practices
 ```
 
 ### Claude Code marketplace
 
 ```bash
 # Add the marketplace
-/plugin marketplace add Pythoughts-labs/vue3-best-practices
+/plugin marketplace add PyModel/vue3-best-practices
 
 # Install everything at once
 /plugin install vue-skills-bundle@vue3-best-practices
@@ -62,6 +64,14 @@ Without the prefix, triggering depends on how closely the prompt matches a skill
 ## MCP server
 
 For agents that consume MCP instead of the skills registry, [`mcp/`](mcp/) exposes every skill as MCP tools. The agent calls `vue_best_practices` when it detects Vue work, then pulls individual reference files on demand.
+
+The server is published as [`@pymodel/vue-skills-mcp`](https://www.npmjs.com/package/@pymodel/vue-skills-mcp) with the skills bundled, so no clone is needed:
+
+```bash
+claude mcp add vue-skills -- npx -y @pymodel/vue-skills-mcp
+```
+
+To run it from a local clone instead:
 
 ```bash
 cd mcp && npm install
@@ -129,7 +139,7 @@ claude mcp add vue-skills -- node <REPO>/mcp/index.mjs
 |-------|-------------|--------|
 | **vue-best-practices** | Vue 3 + Composition API + TypeScript | Reactivity, SFC structure, data flow, composables, SSR, performance |
 | **vue-options-api-best-practices** | Options API (`data()`, `methods`) | `this` context, lifecycle, TypeScript with Options API |
-| **vue-router-best-practices** | Vue Router 4 | Navigation guards, route params, route-component lifecycle |
+| **vue-router-best-practices** | Vue Router 4/5 | Navigation guards, route params, file-based routing, route-component lifecycle |
 | **vue-pinia-best-practices** | Pinia state management | Store setup, reactivity, `storeToRefs`, state patterns |
 | **vue-testing-best-practices** | Component or E2E tests | Vitest, Vue Test Utils, Playwright |
 | **vue-jsx-best-practices** | JSX in Vue | Syntax differences from React JSX, plugin config |

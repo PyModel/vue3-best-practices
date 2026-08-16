@@ -1,9 +1,9 @@
 ---
 name: vue-router-best-practices
-description: "Vue Router 4 patterns, navigation guards, route params, and route-component lifecycle interactions."
-version: 1.0.0
+description: "Vue Router 4/5 patterns, navigation guards, route params, file-based routing, and route-component lifecycle interactions."
+version: 1.1.0
 license: MIT
-author: github.com/Pythoughts-labs
+author: github.com/PyModel
 ---
 
 Vue Router best practices, common gotchas, and navigation patterns.
@@ -21,3 +21,6 @@ Vue Router best practices, common gotchas, and navigation patterns.
 
 ### Setup
 - Building production single-page application → See [router-use-vue-router-for-production](reference/router-use-vue-router-for-production.md)
+
+### Vue Router 5
+- Upgrading from v4, or adopting file-based routing → See [router-5-upgrade-and-file-based-routing](reference/router-5-upgrade-and-file-based-routing.md)
