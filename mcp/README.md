@@ -1,6 +1,6 @@
 # vue-skills MCP server
 
-Part of [Pythoughts-labs/vue3-best-practices](https://github.com/Pythoughts-labs/vue3-best-practices).
+Part of [PyModel/vue3-best-practices](https://github.com/PyModel/vue3-best-practices).
 
 Exposes the Vue 3 best-practice skills in this repo as MCP tools, so any MCP
 coding agent can fetch them while working on Vue.
