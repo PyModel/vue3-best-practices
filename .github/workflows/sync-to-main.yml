@@ -41,8 +41,11 @@ jobs:
           BRANCH="sync/dev-to-main-$(date +%Y%m%d%H%M%S)"
           git checkout -b "$BRANCH"
 
-          # Create a merge commit, but don't commit yet
-          git merge --no-ff --no-commit origin/dev
+          # Create a merge commit, but don't commit yet.
+          # This is only here to record dev as a second parent — the merge's
+          # own content is thrown away by the restore below, so conflicts are
+          # expected and must not fail the step (the shell runs with -e).
+          git merge --no-ff --no-commit origin/dev || true
 
           # Reset everything back to main...
           git restore --source=ORIG_HEAD --staged --worktree -- .
