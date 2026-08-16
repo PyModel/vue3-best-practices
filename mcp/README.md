@@ -18,17 +18,13 @@ agent pulls only the references it needs.
 
 ## Setup
 
-```bash
-cd mcp && npm install
-```
-
-Register the server with your agent. Replace `<REPO>` with this repo's absolute
-path.
+Published as [`@pymodel/vue-skills-mcp`](https://www.npmjs.com/package/@pymodel/vue-skills-mcp)
+with the skills bundled, so nothing needs cloning.
 
 ### Claude Code
 
 ```bash
-claude mcp add vue-skills -- node <REPO>/mcp/index.mjs
+claude mcp add vue-skills -- npx -y @pymodel/vue-skills-mcp
 ```
 
 ### Cursor / Windsurf (`~/.cursor/mcp.json` or `mcp_config.json`)
@@ -36,12 +32,25 @@ claude mcp add vue-skills -- node <REPO>/mcp/index.mjs
 ```json
 {
   "mcpServers": {
-    "vue-skills": { "command": "node", "args": ["<REPO>/mcp/index.mjs"] }
+    "vue-skills": { "command": "npx", "args": ["-y", "@pymodel/vue-skills-mcp"] }
   }
 }
 ```
 
-`VUE_SKILLS_DIR` overrides where skills are read from (defaults to `../skills`).
+### From a local clone
+
+```bash
+cd mcp && npm install
+```
+
+Then point your agent at the checkout, replacing `<REPO>` with its absolute path:
+
+```bash
+claude mcp add vue-skills -- node <REPO>/mcp/index.mjs
+```
+
+`VUE_SKILLS_DIR` overrides where skills are read from. The published package
+reads its bundled `./skills`; a clone falls back to `../skills`.
 
 ## About "automatic"
 
